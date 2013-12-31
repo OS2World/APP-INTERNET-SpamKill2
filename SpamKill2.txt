@@ -1,0 +1,31 @@
+                          Upload Information Template for Hobbes.nmsu.edu
+                          ===============================================
+
+        Archive Filename: SpamKill2.zip
+       Short Description: bogofilter version 0.15.8 
+
+
+        Long Description: Bogofilter - Bayesian spam filter 
+                          compiled for VAC with a some changes for cyrillic and OS/2.
+                          May be used in client-server manner. Source code included.
+
+      Proposed directory
+           for placement: /pub/os2/apps/internet/mail/server/
+
+               Your name: Evgeny Kotsuba 
+           Email address: evgen[at]os2russian.irc
+    Program contact name: (same)
+   Program contact email: (same)
+             Program URL: 
+
+      Would you like the
+   contact email address
+    included in listings? no
+
+Operating System/Version: OS/2 Warp etc.
+ Additional requirements: 
+
+                Replaces: 
+
+
+

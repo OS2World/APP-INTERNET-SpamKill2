@@ -1,0 +1,16 @@
+ -+.\s_trig.obj &
+ -+.\s_psi.obj &
+ -+.\s_zeta.obj &
+ -+.\gsl_cdf_chisq.obj &
+ -+.\gsl_cdf_gamma.obj &
+ -+.\gsl_err_error.obj &
+ -+.\gsl_err_stream.obj &
+ -+.\gsl_sys_fdiv.obj &
+ -+.\gsl_sys_infnan.obj &
+ -+.\gsl_sys_pow_int.obj &
+ -+.\s_elementary.obj &
+ -+.\s_erfc.obj &
+ -+.\s_exp.obj &
+ -+.\s_expint.obj &
+ -+.\s_gamma_inc.obj &
+ -+.\s_log.obj;

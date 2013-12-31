@@ -1,0 +1,290 @@
+			       =================
+				BOGOFILTER NEWS
+			       =================
+
+$Id: CHANGES-0.15,v 1.36 2003/11/05 13:34:16 relson Exp $
+     
+	2003-11-05
+
+	* Fixed timestamp config option.
+	* Removed repetition counts in lexer for TOKEN and MIME_BOUNDARY
+          patterns to reduce executable size.
+
+	2003-11-01
+
+	* Remove --disable-* options for algorithms. Has never been supported
+	  well and serves no useful purpose, the algorithm code is irrelevant
+	  compared to lexer or other stuff.
+
+0.15.8	2003-10-29
+
+	* Print "X-Bogosity" line when "-t" is used alone.
+	* Modified handling of mime attachments to decode rfc822 and
+	  to ignore applications and images.
+
+	2003-10-27
+
+	* Change bogoupgrade back to using 2 arg open for perl-5.6
+          compatibility.
+
+	2003-10-26
+
+	* Added man page for bogotune.
+
+	2003-10-23
+
+	* Initial release of faster, C language version of bogotune.
+
+	2003-10-21
+
+	* Configure script modified to better detect BerkeleyDB libs.
+	* Makefile modified to build bogolexer and bogoutil with fewer
+	  shared libs.
+
+	2003-10-19
+
+	* Added decoding of percent escaped characters in URLs.
+
+	2003-10-16
+
+	* English and french versions of bogofilter-faq.html revised.
+	* Tuning script doc/bogotune rewritten as C program.
+
+	2003-10-15
+
+	* Fix build problem in doc directory.
+	* Refactored source code so bogolexer will build without
+          datastore code.
+
+	2003-10-14
+
+	* Fix initialization problem that prevents reading more than
+          one msg-count file.
+	* Initialize wordhash storage.
+
+0.15.7	2003-10-13 - Stable Release
+
+	* Include all tokens in bogoutil dump output (unless in
+	  maintenance mode).
+
+	2003-10-08
+
+	* Disable header line tagging when processing msg-count files.
+
+	2003-10-06
+
+	* Added decoding of escaped characters in html.
+	* Revised mailbox processing so type recognition is now
+	  table driven.
+	* Added support for ANT mailboxes.
+	* Made portability changes for OS/2 and RISC-OS
+
+0.15.6	2003-10-02
+
+	* Fixed problem in bogoupgrade.
+	* Revised configure.ac to remove GLIBC-2.3 dependency and
+          include info for DOS-ish file in config.h.
+
+	2003-10-01
+
+	 * Bogofilter can now use GSL 1.0 to 1.3 as well as 1.4.
+	   If your distribution splits GSL into a library and a developer
+	   package (Mandrake and Debian Linux), remember to install both!
+	 * Don't allow whitespace in SMTP and ESMTP tokens.
+	 * Revised reference ouputs for SMTP/ESMTP change.
+
+0.15.5.2 2003-10-01
+
+	 * Rebuild of i586.rpm with GSL-1.4 dynamically linked.
+           Source rpms and bogofilter-static rpm not affected.
+
+0.15.5.1 2003-09-30
+
+	 * Added GSL-1.4 as requirement for binary rpm.
+	 * Fixed up t.separate reference test and cleaned up 
+	   t.degen, t.split, and t.regtest.
+	 * Man page and French FAQ revised.
+
+0.15.5	2003-09-29
+
+	* Added '-H' (header-degen) option to aid transition to new
+	  parsing.  See RELEASE.NOTES-0.15 for more info.
+
+	2003-09-28
+
+	* Minor revisions of OS/2 and RISC-OS compatibility code.
+
+	2003-09-27
+
+	* Transaction code added for wordlist maintenance.
+	* Timestamp code refactored and moved from maint.c to datastore.c
+
+	2003-09-26
+
+	* VERPs (Variable Envelope Return Paths) now have their
+          sequence numbers replaced by a '#' for scoring.
+	* Fixed problem that caused auto-update ("-u") to not update
+          separate wordlists.
+	* End-of-header code revised to ensure that passthrough ("-p")
+          properly places the X-Bogosity line.
+
+	2003-09-25
+
+	* GNU GSL 1.4 has replaced DCDFLIB . If GSL 1.4 or newer is
+	  installed in your system, bogofilter will use that (which will
+	  usually be a shared library); if GSL is missing or a prior
+	  version is present, bogofilter will statically link against GSL 1.4
+	  excerpts from the gsl/ directory.
+
+	  While we believe we have been allowed to include DCDFLIB with
+	  bogofilter, some people had expressed concerns. GSL is subject
+	  to the GNU General Public License v2, so we are DEFINITELY
+	  allowed to include it.
+
+	2003-09-22
+
+	* Added support for OS/2's file system.
+
+	2003-09-21
+
+	* Fixed logging behavior when scoring mailboxes, maildirs, etc.
+								
+	2003-09-20
+
+	* Fixed processing of rmail files.
+
+0.15.4	2003-09-20
+
+	* Additional header line tagging as suggested by Michael O'Reilly.
+	* Minor revision of bogotune.
+
+	2003-09-17
+
+	* Report if database file permissions wrong.
+	* No longer including pid in syslog error messages.
+
+	2003-09-16
+
+	* No longer ignoring message separators.
+
+	2003-09-15
+
+	* Added BOGOTEST environment variable to enable flex debugging.
+	* Minor revision of bogominitrain.pl
+
+	2003-09-13
+
+	* Fixed bogoutil problem with '-w' and '-p'.
+
+	2003-09-12
+
+	* Revise parsing pattern for "encoded text" and regression
+          test for folded text.
+
+	2003-09-11
+
+	* Use GSL (the Gnu Scientific Library) when it's available.
+
+0.15.3	2003-09-10
+
+	2003-09-09
+
+	* Fixed maintenance mode (broken during database API rewrite).
+	* Added regression test for maintenance mode.
+	* Re-organized test framework to put all scripts in src/tests,
+          all input files in src/tests/inputs, and reference outputs
+          in src/tests/outputs.
+
+	2003-09-08
+
+	* Revised parsing to ignore additional headers, i.e.
+          Resent-Message-ID, In-Reply-To, and References.
+
+	2003-09-07
+	
+	* Fix auto-update ('-u') bug that double registers ham and spam.
+	* Correct QDBM optimization problems arising from API change.
+
+0.15.2	2003-09-07
+
+	2003-09-06
+
+	* Header line unfolding now handled by flex rules.
+	  Special thanks to Michael O'Reilly for his help!
+	* Initial release of RISC-OS support, including qdbm and tdb.
+	* QDBM is now supported.
+	* The data base configuration has changed. --with-tdb is gone,
+	  use --with-database=db, --with-database=tdb or
+	  --with-database=qdbm instead.
+
+	2003-09-05
+
+	* Update bogowordfreq to work with bogoreader.
+	* Fatal flex errors are now caught and bogofilter exits
+          gracefully after closing its database(s).
+
+0.15.1	2003-09-03
+
+	* Limit size of unfolded header lines.
+
+	2003-09-02
+
+	* Check for xmlto during configuration.
+	* Fix problem in empty line parsing rule.
+	* Fix string termination problem for bulk mode paths.
+
+	2003-09-01
+
+	* Allow -I to be used with file or directory.
+	* Revise flex rule for encoded text to reduce program size.
+
+	2003-08-31
+
+	* Revise flex grammar:
+	  - to reduce size of generated rules
+	  - to simplify handling of header tags and mime parts
+
+	2003-08-30
+
+	* Clean-up message header processing:
+	  - Don't tokenize message separator lines.
+	  - Merge whitespace separated encoded words.
+	  - Unfold header lines.
+
+0.15.0	2003-08-30
+
+	* Fix defective printing in 'bogofilter -Q' output.
+
+	2003-08-28
+
+	* Revise mime processing to cure "fatal flex scanner internal
+	  error--end of buffer missed".
+	* Restore parsing rule for ending a "loose" html comment.
+
+	2003-08-26
+
+	* Change mime boundary line to operate on raw input,
+	  i.e. before decoding it.
+	* Add charset map for windows-1251 to KOI8-R (Cyrillic).
+
+	2003-08-24
+
+	* Fix some printf calls for 64-bit machines (%*s).
+	* Fix compilation with TDB.
+	* The -b and -B options now autodetect Maildir/s and iterate over each
+	  mail in them. When the named input is a file, it is assumed to be a
+	  single mail unless -s, -S, -n, -N or -M is given - in that case it's
+	  an mbox.
+	* Revised message reader implementation so the way of specifing the
+	  input is independent from the input format (such as mbox vs.
+	  Maildir).
+	* Bugfixed Maildir implementation to read cur/ and new/.
+	* Implement support for MH directory (such as used by Sylpheed).
+
+	2003-08-23
+
+	* Implemented new message reading protocol for processing
+	  bulk mode, splitting mailboxes into messages, reading
+	  messages in maildirs, etc.
+
+ vim:tw=79 com=bf\:* ts=8 sts=8 sw=8 ai:

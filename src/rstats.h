@@ -1,0 +1,31 @@
+/* $Id: rstats.h,v 1.5 2003/10/31 22:26:51 relson Exp $ */
+
+/*****************************************************************************
+
+NAME:
+   rstats.h -- support for debug routines for printing robinson data.
+
+AUTHOR:
+   David Relson <relson@osagesoftware.com>
+
+******************************************************************************/
+
+#ifndef RSTATS_H
+#define RSTATS_H
+
+void rstats_init(void);
+void rstats_cleanup(void);
+
+void rstats_add(const word_t *token,
+		wordprop_t *props);
+
+void rstats_fini(size_t robn, 
+		 FLOAT P, 
+		 FLOAT Q, 
+		 double spamicity);
+
+void rstats_print(void);
+
+void rstats_cnt_rn_ns_sp(uint *cnt, uint *rn, uint *ns, uint *sp);
+
+#endif	/* RSTATS_H */

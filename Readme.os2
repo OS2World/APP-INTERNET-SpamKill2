@@ -1,0 +1,17 @@
+/* Readme.OS2 */
+SpamKill2 is Bogofilter with a fiew changes.
+I rename it due to annoying for russian people name. "Bogo" is like "God's"
+
+If you run SpamKill2 without parameters - than it will run as sever, 
+and than you can use SpamClient.exe to ask server for classify files 
+or learn on files. Look at cmd  to test/learn on directories.
+SpamKill2.exe as server serialize access to database, standalone 
+SpamKill2.exe shold use database locking, but I don't test it
+
+To look at help do
+SpamKill2.exe -h 2>info
+
+
+Changes with cyrilics:
+there are a number changes for better handling cyrillics spam, that is not
+yet pass to bogofilter's main developers - look at charset.c
